@@ -19,7 +19,13 @@ let conf = {
                 test: /\.html/,
                 use: extractHTML.extract({
                     use: [
-                        "html-loader",
+                        {
+                            loader: "html-loader",
+                            options: {
+                                attrs: ['img:src', 'source:srcset']
+                            }
+                        }
+
                     ]
                 })
             },
@@ -39,11 +45,13 @@ let conf = {
                 })
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
+                test: /\.(png|jpg|gif|svg)$/i,
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {}
+                        options: {
+                            name: '/images/[name]_[hash:7].[ext]',
+                        }
                     }
                 ]
             },

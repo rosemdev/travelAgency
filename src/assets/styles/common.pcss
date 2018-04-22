@@ -1,0 +1,106 @@
+
+/*Common styles*/
+
+.menu {
+  background-color: var(--lightBlue);
+  position: relative;
+  & header {
+    & .logo {
+      background-color: var(--blue);
+      display: inline-block;
+      top: 0;
+      z-index: 3;
+      position: absolute;
+      padding: 5px;
+
+      & > img {
+        width: 150px;
+        margin: 15px 27px;
+      }
+    }
+    & nav {
+      & ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 15px;
+        & li {
+          padding: 3px;
+          margin: 5px;
+          border: 2px transparent solid;
+          transition: border-bottom .3s ease-in-out;
+          text-align: center;
+          font-weight: var(--light);
+          &:hover {
+            border-bottom: 2px var(--blue) solid;
+          }
+          &:last-child {
+            background-color: var(--lightBlue);
+            & a {
+              background-color: var(--blue);
+              padding: 10px 20px;
+            }
+          }
+
+          & a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*.large-hero {
+//background-image: url("../images/hero--large.jpg"); position: relative;
+  & .background {
+    & img {
+      display: block;
+      width: 100%;
+    }
+    &::after {
+      content: '';
+      height: 10px;
+      width: 100%;
+      background-color: var(--blue);
+      position: absolute;
+    }
+  }
+
+  & .description {
+    transform: translate(-50%, -60%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: white;
+    width: 30%;
+    font-size: 25px;
+
+    & h1 {
+      color: var(--blue);
+      font-weight: var(--regular);
+    }
+
+    & h2 {
+      color: var(--blue);
+      font-weight: var(--light);
+
+    }
+
+    & p {
+      font-size: 20px;
+      & a {
+        color: white;
+        background-color: #d59442;
+        padding: 15px 20px;
+        margin-top: 15px;
+        display: inline-block;
+        font-weight: var(--bold);
+
+      }
+    }
+
+  }
+
+}*/
