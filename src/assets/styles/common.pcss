@@ -43,7 +43,7 @@
           padding: 3px;
           margin: 3px;
           border: 2px transparent solid;
-          transition: border-bottom .3s ease-in-out;
+          transition: border-bottom .3s ease-in-out, background-color .5s ease-in-out;
           text-align: center;
           font-weight: var(--light);
           &:hover {
@@ -117,7 +117,11 @@
         display: inline-block;
         font-weight: var(--bold);
         white-space: nowrap;
+        transition: background-color .5s ease-in-out;
 
+        &:hover {
+          background-color: var(--blue);
+        }
       }
     }
 
@@ -229,6 +233,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-top: 25px;
     & .user-card {
       background-color: white;
       position: relative;
@@ -268,4 +273,26 @@
 
     }
   }
+}
+
+footer {
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+
+  & p {
+    & a {
+      display: inline-block;
+      background-color: var(--orange);
+      padding: 10px 22px;
+      color: white;
+      margin: 15px  0 0 25px;
+      transition: background-color .5s ease-in-out;
+      &:hover {
+        background-color: var(--lightBlue);
+      }
+    }
+  }
+
+
 }
