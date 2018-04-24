@@ -1,4 +1,12 @@
 /*Common styles*/
+html {
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
 
 .menu {
   background-color: var(--lightBlue);
@@ -19,17 +27,6 @@
         margin: 15px 27px;
       }
 
-      &::after {
-        display: block;
-        width: 348px;
-        height: 325px;
-        content: "";
-        position: absolute;
-        background-color: #f398268a;
-        border-radius: 50%;
-        top: -70px;
-        right: -68px;
-      }
     }
     & .burger-menu {
       margin: 15px;
@@ -64,14 +61,27 @@
       justify-content: center;
       border-radius: 50%;
       width: 320px;
-     height: 320px;
-     padding: 66px;
-     position: absolute;
-     right: -55px;
-     top: -44px;
-     z-index: 4;
-     background-color: #3055728a;
-     text-align: left;
+      height: 320px;
+      padding: 66px;
+      position: absolute;
+      right: -55px;
+      top: -44px;
+      z-index: 4;
+      background-color: #3055728a;
+      text-align: left;
+      &::after {
+        display: block;
+        width: 348px;
+        height: 325px;
+        content: "";
+        position: absolute;
+        background-color: #f398268a;
+        border-radius: 50%;
+        top: 4px;
+        right: -52px;
+        z-index: -5;
+        box-shadow: -14px 14px 20px 0px #5a4a4a80;
+      }
       & ul {
         display: flex;
         align-items: flex-end;
