@@ -158,9 +158,9 @@
       }
     }
     & .get-started_description {
-        & h2 {
-          text-align: left;
-        }
+      & h2 {
+        text-align: left;
+      }
 
       & p {
         line-height: 29px;
@@ -177,6 +177,95 @@
   }
 }
 
-.features {
+.icon-headline {
+  text-align: center;
 
+  & img {
+    vertical-align: middle;
+    margin-right: 15px;
+  }
+
+  & h2 {
+    display: inline;
+    vertical-align: middle;
+
+  }
+}
+
+.features {
+  background-color: var(--blue);
+  color: white;
+
+  & h2 {
+    color: white;
+  }
+
+  & .feature-descriptions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    & .feature {
+      display: flex;
+      align-items: flex-start;
+      flex-basis: 40%;
+
+      & img {
+        padding-top: 15px;
+        margin-right: 25px;
+
+      }
+    }
+  }
+
+}
+
+.testimonials {
+  background-image: url("../images/testimonials-bg.jpg");
+  //background-color: rebeccapurple;
+  & .user-testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    & .user-card {
+      background-color: white;
+      position: relative;
+      flex: 30%;
+      padding: 15px;
+      margin: 55px 0;
+      //margin: 25px;
+      & .avatar {
+        text-align: center;
+        & img {
+          border: 4px white solid;
+          border-radius: 50%;
+          position: absolute;
+          top: -18%;
+          left: 57px;
+
+        }
+      }
+      & h3, & h4 {
+        text-align: center;
+      }
+
+      & h3 {
+        color: var(--blue);
+        font-weight: var(--bold);
+        margin-top: 80px;
+      }
+
+      & h4 {
+        color: var(--orange);
+      }
+
+      & p {
+        line-height: 25px;
+        color: var(--blue);
+      }
+
+    }
+  }
 }

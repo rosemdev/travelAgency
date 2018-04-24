@@ -36,4 +36,29 @@
 
   }
 
+  .features {
+    & .feature-descriptions {
+      flex-direction: row;
+
+    }
+
+  }
+
+  .testimonials {
+    & .user-testimonials {
+      flex-direction: row;
+      flex-wrap: wrap;
+      & .user-card {
+      margin: 25px;
+        & .avatar {
+          & img {
+            top: -18%;
+            left: 90px;
+          }
+        }
+
+      }
+    }
+  }
+
 }
