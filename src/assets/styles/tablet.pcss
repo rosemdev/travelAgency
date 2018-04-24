@@ -1,22 +1,40 @@
-
-
 /*Tablet*/
 
 @media (min-width: 767px) {
-  body {
-    background-color: var(--blue);
-  }
-
   .menu {
     & header {
-      display: flex;
-      justify-content: space-between;
+      & .logo {
+        position: absolute;
+        margin-left: 25px;
+      }
+      & .burger-menu {
+        display: none;
+      }
       & nav {
+        justify-content: flex-end;
         & ul {
           flex-direction: row;
         }
       }
     }
+  }
+
+  .our-beginning {
+    & .get-started {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      & .get-started_image {
+        margin: 25px;
+        & img {
+          width: auto;
+        }
+      }
+      & .get-started_description {
+        margin: 25px;
+      }
+    }
+
   }
 
 }

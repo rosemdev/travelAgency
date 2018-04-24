@@ -1,16 +1,17 @@
-
 /*Common styles*/
 
 .menu {
   background-color: var(--lightBlue);
   position: relative;
+  z-index: 2;
   & header {
+    padding: 0;
     & .logo {
       background-color: var(--blue);
-      display: inline-block;
       top: 0;
       z-index: 3;
-      position: absolute;
+      position: relative;
+      text-align: center;
       padding: 5px;
 
       & > img {
@@ -18,7 +19,21 @@
         margin: 15px 27px;
       }
     }
+    & .burger-menu {
+      margin: 15px;
+      transform: rotate(90deg);
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      & span {
+        background-color: white;
+        margin: 4px;
+        padding: 1px;
+      }
+    }
     & nav {
+      display: flex;
+      justify-content: center;
       & ul {
         display: flex;
         align-items: center;
@@ -26,19 +41,23 @@
         padding: 15px;
         & li {
           padding: 3px;
-          margin: 5px;
+          margin: 7px;
           border: 2px transparent solid;
           transition: border-bottom .3s ease-in-out;
           text-align: center;
           font-weight: var(--light);
           &:hover {
-            border-bottom: 2px var(--blue) solid;
+            border-bottom: 2px var(--orange) solid;
           }
           &:last-child {
-            background-color: var(--lightBlue);
+            background-color: var(--blue);
+            padding: 10px 20px;
+            &:hover {
+              border-bottom: 2px transparent solid;
+              background-color: var(--orange);
+            }
             & a {
-              background-color: var(--blue);
-              padding: 10px 20px;
+
             }
           }
 
@@ -51,8 +70,7 @@
   }
 }
 
-/*.large-hero {
-//background-image: url("../images/hero--large.jpg"); position: relative;
+.large-hero {
   & .background {
     & img {
       display: block;
@@ -69,12 +87,12 @@
 
   & .description {
     transform: translate(-50%, -60%);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     text-align: center;
     color: white;
-    width: 30%;
     font-size: 25px;
 
     & h1 {
@@ -92,15 +110,69 @@
       font-size: 20px;
       & a {
         color: white;
-        background-color: #d59442;
+        background-color: var(--orange);
         padding: 15px 20px;
         margin-top: 15px;
+        text-shadow: none;
         display: inline-block;
         font-weight: var(--bold);
+        white-space: nowrap;
 
       }
     }
 
   }
 
-}*/
+}
+
+.our-beginning {
+  & h3 {
+    color: var(--orange);
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    font-size: 1.5rem;
+    font-weight: var(--regular);
+  }
+
+  & .begin-travel {
+    margin: 25px 0;
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  & .get-started {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    color: var(--blue);
+    & .get-started_image {
+      & img {
+        display: block;
+        padding-top: 40px;
+        width: 100%;
+      }
+    }
+    & .get-started_description {
+        & h2 {
+          text-align: left;
+        }
+
+      & p {
+        line-height: 29px;
+        & a {
+          color: var(--orange);
+          padding-bottom: 2px;
+          text-decoration: underline;
+          font-weight: var(--bold);
+        }
+      }
+
+    }
+
+  }
+}

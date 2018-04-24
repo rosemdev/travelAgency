@@ -14,13 +14,36 @@
 
   --blue: #2f5572;
   --lightBlue: #5c7a8f;
+  --orange: #d59442;
 }
 
 .main-content {
   max-width: 1200px;
   margin: auto;
+  padding: 0 18px;
+}
+
+.page-section {
+  padding-top: 3.4rem;
+  padding-bottom: 3.4rem;
+
+
+}
+
+.headline {
+  color: var(--blue);
+  font-size: 2.4rem;
+  text-align: center;
+  font-weight: var(--regular);
+}
+
+@define-mixin small {
+  @media (min-width: 530px) {
+    @mixin-content;
+  }
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  //font-family: 'Quicksand', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
