@@ -6,14 +6,24 @@
       & .logo {
         position: absolute;
         margin-left: 25px;
+          &::after {
+            content: none;
+          }
       }
       & .burger-menu {
         display: none;
       }
       & nav {
+        position: static;
+        border-radius: 0;
+        width: auto;
+        height: auto;
+        padding: 15px;
         justify-content: flex-end;
         & ul {
           flex-direction: row;
+          align-items: center;
+          padding: 0;
         }
       }
     }

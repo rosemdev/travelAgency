@@ -18,33 +18,71 @@
         width: 150px;
         margin: 15px 27px;
       }
+
+      &::after {
+        display: block;
+        width: 348px;
+        height: 325px;
+        content: "";
+        position: absolute;
+        background-color: #f398268a;
+        border-radius: 50%;
+        top: -70px;
+        right: -68px;
+      }
     }
     & .burger-menu {
       margin: 15px;
-      transform: rotate(90deg);
       display: inline-block;
       position: absolute;
       right: 0;
+      z-index: 5;
       & span {
         background-color: white;
-        margin: 4px;
+        margin: 5px;
         padding: 1px;
+        border-radius: 5px;
+        display: block;
+        height: 5px;
+        width: 31px;
+
+        &:first-child {
+          transform: rotate(-131deg) translate(-7px, -7px);
+
+        }
+        &:nth-last-of-type(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          transform: rotate(-45deg) translate(7px, -7px);
+        }
       }
     }
     & nav {
       display: flex;
       justify-content: center;
+      border-radius: 50%;
+      width: 320px;
+     height: 320px;
+     padding: 66px;
+     position: absolute;
+     right: -55px;
+     top: -44px;
+     z-index: 4;
+     background-color: #3055728a;
+     text-align: left;
       & ul {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         flex-direction: column;
-        padding: 15px;
+        padding: 26px 0 0 36px;
         & li {
           padding: 3px;
           margin: 3px;
           border: 2px transparent solid;
           transition: border-bottom .3s ease-in-out, background-color .5s ease-in-out;
-          text-align: center;
+          text-align: right;
           font-weight: var(--light);
           &:hover {
             border-bottom: 2px var(--orange) solid;
@@ -55,9 +93,6 @@
             &:hover {
               border-bottom: 2px transparent solid;
               background-color: var(--orange);
-            }
-            & a {
-
             }
           }
 
@@ -228,7 +263,6 @@
 
 .testimonials {
   background-image: url("../images/testimonials-bg.jpg");
-  //background-color: rebeccapurple;
   & .user-testimonials {
     display: flex;
     flex-direction: column;
@@ -240,7 +274,7 @@
       flex: 30%;
       padding: 15px;
       margin: 55px 0;
-      //margin: 25px;
+    //margin: 25px;
       & .avatar {
         text-align: center;
         & img {
@@ -286,13 +320,12 @@ footer {
       background-color: var(--orange);
       padding: 10px 22px;
       color: white;
-      margin: 15px  0 0 25px;
+      margin: 15px 0 0 25px;
       transition: background-color .5s ease-in-out;
       &:hover {
         background-color: var(--lightBlue);
       }
     }
   }
-
 
 }
