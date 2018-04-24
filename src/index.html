@@ -56,7 +56,11 @@
     </div>
     <div class="get-started">
         <div class="get-started_image">
-            <img src="assets/images/our-start.jpg" alt="Our founder, Jane Doe">
+            <picture>
+                <source srcset="assets/images/our-start-hi-dpi.jpg" media = "(min-width: 1035px)">
+                <!--<source srcset="assets/images/our-start-landscape-hi-dpi.jpg" media="(min-width: 600px)">-->
+                <img src="assets/images/our-start-landscape.jpg" alt="Our founder, Jane Doe">
+            </picture>
         </div>
         <div class="get-started_description">
             <h2 class="headline">Here&rsquo;s how we got started&hellip;</h2>
@@ -89,7 +93,7 @@
 </div>
 <div class="features page-section main-content">
     <img src="assets/images/icons/star.svg">
-    <h2 class="headline">Our Features</h2>
+    <h2 class="headline">Our <strong>Features</strong></h2>
     <img src="assets/images/icons/rain.svg">
     <h3>We&rsquo;ll Watch the Weather</h3>
     <p>Download our app and we&rsquo;ll send you a notice if it&rsquo;s about to rain in the next 20 minutes around
