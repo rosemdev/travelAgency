@@ -13,7 +13,7 @@ let conf = {
     devServer: {
         contentBase: path.join(__dirname, "dist"),
     },
-    module : {
+    module: {
         rules: [
             {
                 test: /\.html/,
@@ -55,6 +55,19 @@ let conf = {
                     }
                 ]
             },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        query: {
+                            presets: ['es2015']
+                        }
+                    }
+
+                ]
+            }
         ]
     },
     plugins: [
@@ -64,38 +77,13 @@ let conf = {
 };
 
 
+module.exports = (env, options) => {
 
+    let production = options.mode === 'production';
+    conf.devtool = production
+        ? 'source-map'
+        : 'eval-sourcemap';
 
-//
-//     module: {
-//         rules: [
-//             {
-//                 test: /\.pcss$/,
-//                 exclude: /node_modules/,
-//                 use: ExtractTextPlugin.extract({
-//                     fallback: "style-loader",
-//                     use: "css-loader"
-//                 }),
-//                 use: [
-//                     {
-//                         loader: 'style-loader',
-//                     },
-//                     {
-//                         loader: 'css-loader',
-//                         options: {
-//                             importLoaders: 1,
-//                         }
-//                     },
-//
-//                 ]
-//             }
-//         ]
-//     },
-//     plugins: [
-//         new ExtractTextPlugin("styles.css"),
-//     ]
-//
-// };
-
-module.exports = conf;
+return conf;
+};
 
