@@ -11,6 +11,9 @@
         display: none;
       }
       & nav {
+        display: flex !important;
+        opacity: 1;
+        transform: scale(1);
         position: static;
         border-radius: 0;
         width: auto;
@@ -25,8 +28,19 @@
           flex-direction: row;
           align-items: center;
           padding: 0;
+
+          & li {
+            padding: 3px;
+          }
         }
       }
+    }
+  }
+
+  .large-hero {
+    & .description {
+      font-size: 25px;
+      top: 40%;
     }
   }
 
