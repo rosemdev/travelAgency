@@ -1,6 +1,7 @@
 /*Common styles*/
 html {
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -8,9 +9,38 @@ body {
   width: 100%;
 }
 
+.menu.sticky {
+  background-color: var(--blue);
+  box-shadow: 0 0 8px 1px rgba(53, 47, 47, 0.54118);
+  & header {
+    & .logo {
+      padding: 0;
+      & img {
+        &.smaller {
+          width: 84px;
+        }
+      }
+    }
+    & nav {
+      padding: 3px 15px;
+      & ul {
+        & li{
+          &:last-child {
+            &.orange {
+              background-color: var(--orange);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .menu {
-  background-color: var(--lightBlue);
-  position: relative;
+  background-color: #305572cc;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 2;
   & header {
     padding: 0;
@@ -23,9 +53,9 @@ body {
       padding: 5px;
 
       & > img {
-        width: 150px;
+        width: 94px;
         margin: 15px 27px;
-        transition: transform .2s ease-out;
+        transition: transform .5s ease-out;
 
         &:hover {
           transform: scale(1.2);
@@ -34,12 +64,11 @@ body {
 
     }
     & .burger-menu {
-      margin: 15px;
+      margin: 20px;
       display: inline-block;
       position: absolute;
       right: 0;
       z-index: 5;
-
       &:hover {
         margin: 16px;
       }

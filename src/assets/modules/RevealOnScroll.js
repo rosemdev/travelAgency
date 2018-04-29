@@ -8,18 +8,13 @@ export default class RevealOnScroll {
         this.element = $(elementSelector);
         this.options = options;
         this.sequence = sequence;
-        this.createReveal.call(this);
+        this.createReveal();
     }
 
-
-
-
     createReveal () {
-       this.element.each((index, item) => {
-           RevealOnScroll.sr.reveal(item, this.options, this.sequence);
-       });
+       RevealOnScroll.scrollReveal.reveal(this.element, this.options, this.sequence);
     }
 
 }
 
-        RevealOnScroll.sr = ScrollReveal();
+RevealOnScroll.scrollReveal = ScrollReveal();

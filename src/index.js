@@ -30,18 +30,42 @@ $(document).ready(function () {
         })
     }, 2000);
 
-    let features = new RevealOnScroll(".feature-descriptions", {
-        scale: 0.5,
-        opacity: 0.3,
+    let features = new RevealOnScroll(".feature", {
+        scale: 1,
+        opacity: 0.25,
         reset: true,
         viewOffset: {top: 50},
         easing: 'cubic-bezier(0.68, 0.02, 0.82, 0.99)',
-    }, 50);
+    }, 200);
     let testimonials = new RevealOnScroll(".user-card", {
-        opacity: 0.5,
-        scale: 0.7,
+        opacity: 0.25,
+        scale: 0.8,
         reset: true,
         delay: 2,
-    }, 70);
+    }, 200);
+    console.log(testimonials.sequence);
+
+
+    function stickyHeader () {
+        let header = document.querySelector(".menu"),
+            logo = document.querySelector(".logo > img"),
+            headerButton = document.querySelector("header > nav > ul > li:nth-child(4)");
+
+
+        if(window.pageYOffset > 80) {
+            header.classList.add("sticky");
+            logo.classList.add("smaller");
+            headerButton.classList.add("orange");
+
+        } else {
+            header.classList.remove("sticky");
+            logo.classList.remove("smaller");
+            headerButton.classList.remove("orange");
+
+        }
+
+    }
+
+    window.addEventListener("scroll", stickyHeader)
 
 });

@@ -1,12 +1,30 @@
 /*Tablet*/
 
 @media (min-width: 767px) {
+  .menu.sticky {
+    & header {
+      & .logo {
+        & img {
+          &.smaller {
+            margin: 8px 19px;
+          }
+        }
+      }
+    }
+  }
   .menu {
     & header {
       & .logo {
         position: absolute;
         margin-left: 25px;
+
+        & img {
+          width: 150px;
+          //margin: 10px 21px;
+          transition: width .2s ease-out;
+        }
       }
+
       & .burger-menu {
         display: none;
       }
@@ -31,6 +49,10 @@
 
           & li {
             padding: 3px;
+
+            &:last-child {
+              transition: background-color .4s ease-out;
+            }
           }
         }
       }
@@ -49,11 +71,6 @@
       flex-direction: row;
       flex-wrap: wrap;
 
-      & .get-started_image {
-        & img {
-          //width: auto;
-        }
-      }
       & .get-started_description {
         margin: 25px;
       }
@@ -86,4 +103,9 @@
     }
   }
 
+}
+
+@keyframes smoothHeader {
+  from {opacity: 0.5;}
+  to {opacity: 1;}
 }
