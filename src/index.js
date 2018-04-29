@@ -53,13 +53,9 @@ $(document).ready(function () {
 
         if (window.pageYOffset > 80) {
             header.classList.add("sticky");
-            logo.classList.add("smaller");
-            headerButton.classList.add("orange");
 
         } else {
             header.classList.remove("sticky");
-            logo.classList.remove("smaller");
-            headerButton.classList.remove("orange");
 
         }
 
