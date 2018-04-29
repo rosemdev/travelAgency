@@ -5,7 +5,7 @@ export default class TypingGoal {
         this.speed = options.speed;
         this.currentCharacterIndex = 0;
         this.typeWriter.call(this);
-        console.log(this.contentBlock);
+
     }
 
     typeWriter () {

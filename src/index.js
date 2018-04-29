@@ -7,6 +7,7 @@ import RevealOnScroll from "./assets/modules/RevealOnScroll"
 import TypingGoal from "./assets/modules/TypingGoal"
 
 
+
 $(document).ready(function () {
     let mobileMenu = new MobileMenu(".burger-menu", "active");
 
@@ -28,6 +29,23 @@ $(document).ready(function () {
             speed: 150
         })
     }, 2000);
+
+    let features = new RevealOnScroll(".feature-descriptions", {
+        scale: 0.5,
+        reset: false,
+        viewOffset: {top: 10},
+        easing: 'cubic-bezier(0.68, 0.02, 0.82, 0.99)'
+    });
+    let testimonials = new RevealOnScroll(".user-card", {
+        opacity: 0.5,
+        scale: 0.7,
+        reset: false,
+        delay: 2,
+    });
+
+
+
+
 
 
 });
