@@ -28,8 +28,18 @@ $(document).ready(function () {
         })
     }, 2000);
 
-    let features = new RevealOnScroll(".feature-descriptions");
-    let testimonials = new RevealOnScroll(".user-testimonials");
+    let features = new RevealOnScroll(".feature-descriptions", {
+        scale: 0.5,
+        reset: false,
+        viewOffset: {top: 10},
+        easing: 'cubic-bezier(0.68, 0.02, 0.82, 0.99)'
+    });
+    let testimonials = new RevealOnScroll(".user-card", {
+        opacity: 0.5,
+        scale: 0.7,
+        reset: false,
+        delay: 2,
+    });
 
 
 
