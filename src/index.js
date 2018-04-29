@@ -12,6 +12,8 @@ $(document).ready(function () {
 
     let revealOnScroll = new RevealOnScroll();
 
+    $(".large-hero >.description").addClass("typing");
+
     let headerGoalH1 = new TypingGoal({
         contentBlock: ".large-hero >.description > h1",
         content: "Your clarity.",
