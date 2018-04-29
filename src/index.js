@@ -7,7 +7,6 @@ import RevealOnScroll from "./assets/modules/RevealOnScroll"
 import TypingGoal from "./assets/modules/TypingGoal"
 
 
-
 $(document).ready(function () {
     let mobileMenu = new MobileMenu(".burger-menu", "active");
 
@@ -46,13 +45,13 @@ $(document).ready(function () {
     console.log(testimonials.sequence);
 
 
-    function stickyHeader () {
+    function stickyHeader() {
         let header = document.querySelector(".menu"),
             logo = document.querySelector(".logo > img"),
             headerButton = document.querySelector("header > nav > ul > li:nth-child(4)");
 
 
-        if(window.pageYOffset > 80) {
+        if (window.pageYOffset > 80) {
             header.classList.add("sticky");
             logo.classList.add("smaller");
             headerButton.classList.add("orange");
