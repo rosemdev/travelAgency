@@ -32,20 +32,16 @@ $(document).ready(function () {
 
     let features = new RevealOnScroll(".feature-descriptions", {
         scale: 0.5,
-        reset: false,
-        viewOffset: {top: 10},
-        easing: 'cubic-bezier(0.68, 0.02, 0.82, 0.99)'
-    });
+        opacity: 0.3,
+        reset: true,
+        viewOffset: {top: 50},
+        easing: 'cubic-bezier(0.68, 0.02, 0.82, 0.99)',
+    }, 50);
     let testimonials = new RevealOnScroll(".user-card", {
         opacity: 0.5,
         scale: 0.7,
-        reset: false,
+        reset: true,
         delay: 2,
-    });
-
-
-
-
-
+    }, 70);
 
 });

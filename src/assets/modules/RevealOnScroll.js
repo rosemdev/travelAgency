@@ -4,9 +4,10 @@ import ScrollReveal from "../../../node_modules/scrollreveal/dist/scrollreveal.m
 
 
 export default class RevealOnScroll {
-    constructor (elementSelector, options) {
+    constructor (elementSelector, options, sequence) {
         this.element = $(elementSelector);
         this.options = options;
+        this.sequence = sequence;
         this.createReveal.call(this);
     }
 
@@ -15,17 +16,10 @@ export default class RevealOnScroll {
 
     createReveal () {
        this.element.each((index, item) => {
-           console.log(item);
-           RevealOnScroll.sr.reveal(item, this.options);
+           RevealOnScroll.sr.reveal(item, this.options, this.sequence);
        });
     }
 
 }
 
-        RevealOnScroll.sr = ScrollReveal({
-            // opacity: 0,
-            // scale: 0.5,
-            // reset: false,
-            // viewOffset: {top: 48},
-            // easing: 'cubic-bezier(0.68, 0.02, 0.82, 0.99)',
-        });
+        RevealOnScroll.sr = ScrollReveal();
