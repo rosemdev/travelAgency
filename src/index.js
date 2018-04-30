@@ -5,6 +5,7 @@ import "./assets/styles/reset.pcss";
 import MobileMenu from "./assets/modules/MobileMenu"
 import RevealOnScroll from "./assets/modules/RevealOnScroll"
 import TypingGoal from "./assets/modules/TypingGoal"
+import stickyHeader from "./assets/modules/stickyHeader"
 
 
 $(document).ready(function () {
@@ -45,22 +46,6 @@ $(document).ready(function () {
     console.log(testimonials.sequence);
 
 
-    function stickyHeader() {
-        let header = document.querySelector(".menu"),
-            logo = document.querySelector(".logo > img"),
-            headerButton = document.querySelector("header > nav > ul > li:nth-child(4)");
-
-
-        if (window.pageYOffset > 80) {
-            header.classList.add("sticky");
-
-        } else {
-            header.classList.remove("sticky");
-
-        }
-
-    }
-
-    window.addEventListener("scroll", stickyHeader)
+    let header = new stickyHeader();
 
 });
