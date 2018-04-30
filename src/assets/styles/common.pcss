@@ -137,6 +137,7 @@ body {
           &:hover {
             border-bottom: 2px var(--orange) solid;
           }
+
           &:last-child {
             background-color: var(--blue);
             padding: 10px 20px;
@@ -148,6 +149,12 @@ body {
 
           & a {
             color: white;
+            transition: color .4s ease-out;
+            &.highlighted {
+              color: var(--blue);
+              font-weight: var(--bold);
+
+            }
           }
         }
       }

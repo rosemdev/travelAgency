@@ -1,6 +1,7 @@
 export default function stickyHeader() {
     let header = document.querySelector(".menu");
 
+
     if (window.pageYOffset > 80) {
         header.classList.add("sticky");
 
@@ -12,6 +13,9 @@ export default function stickyHeader() {
 
 
 
+    window.addEventListener("scroll", stickyHeader);
+
+
 }
 
-window.addEventListener("scroll", stickyHeader)
+

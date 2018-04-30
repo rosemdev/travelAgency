@@ -5,7 +5,8 @@ import "./assets/styles/reset.pcss";
 import MobileMenu from "./assets/modules/MobileMenu"
 import RevealOnScroll from "./assets/modules/RevealOnScroll"
 import TypingGoal from "./assets/modules/TypingGoal"
-import stickyHeader from "./assets/modules/stickyHeader"
+import stickyHeader from "./assets/modules/StickyHeader"
+import ScrollIntoView from "./assets/modules/ScrollIntoView"
 
 
 $(document).ready(function () {
@@ -43,9 +44,7 @@ $(document).ready(function () {
         reset: true,
         delay: 2,
     }, 200);
-    console.log(testimonials.sequence);
-
 
     let header = new stickyHeader();
-
+    let view = new ScrollIntoView();
 });
