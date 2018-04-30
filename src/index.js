@@ -1,7 +1,6 @@
 import $ from 'jquery';
-import "./index.html";
-import "./assets/styles/styles.pcss";
 import "./assets/styles/reset.pcss";
+import "./assets/styles/styles.pcss";
 import MobileMenu from "./assets/modules/MobileMenu"
 import RevealOnScroll from "./assets/modules/RevealOnScroll"
 import TypingGoal from "./assets/modules/TypingGoal"
@@ -45,6 +44,6 @@ $(document).ready(function () {
         delay: 2,
     }, 200);
 
-    let header = new stickyHeader();
-    let view = new ScrollIntoView();
+    stickyHeader();
+    ScrollIntoView();
 });

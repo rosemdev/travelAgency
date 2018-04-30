@@ -1,6 +1,6 @@
 let path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const extractHTML = new ExtractTextPlugin("index.html");
 const extractCSS = new ExtractTextPlugin("main.css");
 
 let conf = {
@@ -17,17 +17,15 @@ let conf = {
         rules: [
             {
                 test: /\.html/,
-                use: extractHTML.extract({
-                    use: [
-                        {
-                            loader: "html-loader",
-                            options: {
-                                attrs: ['img:src', 'source:srcset']
-                            }
+                use: [
+                    {
+                        loader: "html-loader",
+                        options: {
+                            attrs: ['img:src', 'source:srcset']
                         }
+                    }
 
-                    ]
-                })
+                ]
             },
             {
                 test: /\.pcss$/,
@@ -45,12 +43,12 @@ let conf = {
                 })
             },
             {
-                test: /\.(png|jpg|gif|svg)$/i,
+                test: /\.(png|jpg|gif|svg|ico)$/i,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '/images/[name]_[hash:7].[ext]',
+                            name: './images/[name]_[hash:7].[ext]',
                         }
                     }
                 ]
@@ -71,7 +69,10 @@ let conf = {
         ]
     },
     plugins: [
-        extractHTML,
+        new HtmlWebpackPlugin({
+            favicon: './src/assets/images/icons/favicon.ico',
+            template: './src/index.html'
+        }),
         extractCSS,
     ],
 };
