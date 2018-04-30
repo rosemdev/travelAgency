@@ -14,14 +14,9 @@ export default function ScrollIntoView() {
                 link = links[i];
 
             if (clickedItem === menuItem) {
-
-                link.classList.add("highlighted");
-                section.scrollIntoView({behavior: "smooth", block: "start"});
-
-            } else {
-                links[i].classList.remove("highlighted");
+                section.scrollIntoView({behavior: "smooth", block: "start", inline: "center"});
             }
         }
-    })
+    });
 
 }

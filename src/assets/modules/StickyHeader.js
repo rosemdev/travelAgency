@@ -9,10 +9,7 @@ export default function stickyHeader() {
         header.classList.remove("sticky");
 
     }
-
-
-
-
+    
     window.addEventListener("scroll", stickyHeader);
 
 

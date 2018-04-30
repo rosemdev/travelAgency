@@ -6,6 +6,7 @@ import RevealOnScroll from "./assets/modules/RevealOnScroll"
 import TypingGoal from "./assets/modules/TypingGoal"
 import stickyHeader from "./assets/modules/StickyHeader"
 import ScrollIntoView from "./assets/modules/ScrollIntoView"
+import HighlightMenuItemOnScroll from "./assets/modules/HighlightMenuItemOnScroll"
 
 
 $(document).ready(function () {
@@ -46,4 +47,11 @@ $(document).ready(function () {
 
     stickyHeader();
     ScrollIntoView();
+
+    let scroll = new HighlightMenuItemOnScroll({
+        offsetTop: function (el) { return el.offsetHeight; }.bind(null, document.querySelector(".menu")),
+        sectionSelector: ".section",
+        menuItemSelector: "nav ul li a",
+        highlightClass: "highlighted"
+    }, document.body)
 });
