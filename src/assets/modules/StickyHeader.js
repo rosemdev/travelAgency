@@ -1,5 +1,5 @@
 export default function stickyHeader() {
-    let header = document.querySelector(".menu");
+    let header = document.querySelector(".header");
 
 
     if (window.pageYOffset > 80) {

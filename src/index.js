@@ -10,7 +10,7 @@ import HighlightMenuItemOnScroll from "./assets/modules/HighlightMenuItemOnScrol
 
 
 $(document).ready(function () {
-    let mobileMenu = new MobileMenu(".burger-menu", "active");
+    let mobileMenu = new MobileMenu(".burger-icon", "active");
 
     let revealOnScroll = new RevealOnScroll();
 
@@ -49,9 +49,9 @@ $(document).ready(function () {
     ScrollIntoView();
 
     let scroll = new HighlightMenuItemOnScroll({
-        offsetTop: function (el) { return el.offsetHeight; }.bind(null, document.querySelector(".menu")),
+        offsetTop: function (el) { return el.offsetHeight; }.bind(null, document.querySelector(".header")),
         sectionSelector: ".section",
         menuItemSelector: "nav ul li a",
         highlightClass: "highlighted"
-    }, document.body)
+    })
 });

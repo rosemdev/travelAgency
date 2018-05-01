@@ -1,76 +1,85 @@
 /*Tablet*/
 
 @media (min-width: 767px) {
-  .menu.sticky {
-    & header {
-      & .logo {
-        & img {
-            margin: 8px 19px;
-          &.smaller {
-          }
-        }
+  .header {
+    background-color: #305572cc;
+
+    & > .container {
+      justify-content: space-between;
+    }
+
+    & .logo {
+      padding: 5px;
+      margin-left: 25px;
+      transform: scale(1.4) translate(21px, 11px);
+      transition: padding .3s, transform .3s;
+    }
+
+    & .burger-icon {
+      display: none;
+    }
+
+    & nav {
+      display: flex !important;
+      opacity: 1;
+      transform: scale(1);
+      position: static;
+      border-radius: 0;
+      width: auto;
+      height: auto;
+      padding: 15px;
+      justify-content: flex-end;
+      background-color: transparent;
+
+      &::after {
+        content: none;
       }
-      & nav {
-        & ul {
-          margin-top: 0;
-          & li {
-            &:last-child {
-              background-color: var(--orange);
-            }
+
+      & ul {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+
+        & li {
+          padding: 3px;
+
+          &:last-child {
+            transition: background-color .4s ease-out;
           }
 
+          & a {
+            &.highlighted {
+              color: var(--orange);
+            }
+          }
         }
       }
     }
   }
-  .menu {
-    & header {
-      & .logo {
-        position: absolute;
-        margin-left: 25px;
 
-        & img {
-          width: 150px;
-          transition: width .2s ease-out;
+  .header.sticky {
+    & .logo {
+      transform: none;
+
+      & img {
+        margin: 8px 19px;
+        &.smaller {
         }
       }
+    }
 
-      & .burger-menu {
-        display: none;
-      }
-      & nav {
-        display: flex !important;
-        opacity: 1;
-        transform: scale(1);
-        position: static;
-        border-radius: 0;
-        width: auto;
-        height: auto;
-        padding: 15px;
-        justify-content: flex-end;
-        background-color: transparent;
-        &::after {
-          content: none;
-        }
-        & ul {
-          flex-direction: row;
-          align-items: center;
-          padding: 0;
+    & nav {
+      padding: 3px 15px;
 
-          & li {
-            padding: 3px;
+      & ul {
+        margin-top: 0;
 
-            &:last-child {
-              transition: background-color .4s ease-out;
-            }
-
-            & a {
-              &.highlighted {
-                color: var(--orange);
-              }
-            }
+        & li {
+          &:last-child {
+            background-color: var(--orange);
           }
         }
+
       }
     }
   }

@@ -17,17 +17,20 @@
   --orange: #d59442;
 }
 
-.main-content {
+.container {
   max-width: 1200px;
   margin: auto;
-  padding: 0 18px;
+}
+
+.section, .footer {
+  & .container {
+    padding: 3.4rem 18px;
+  }
 }
 
 .page-section {
   padding-top: 3.4rem;
   padding-bottom: 3.4rem;
-
-
 }
 
 .headline {
