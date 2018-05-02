@@ -24,6 +24,14 @@ body {
   & .logo {
     background-color: var(--blue);
     text-align: center;
+    @media (min-width: 1024px) and (max-width: 1200px) {
+      &.logo {
+        margin-left: 20px;
+        transition: margin 0.3s;
+
+      }
+
+    }
 
     & > img {
       display: block;
@@ -154,6 +162,13 @@ body {
 
   & .logo {
     padding: 0;
+    @media (min-width: 1024px) and (max-width: 1200px) {
+      &.logo {
+        margin-left: 0;
+
+      }
+
+    }
   }
 }
 
@@ -179,8 +194,7 @@ body {
 
   & .description {
     width: 100%;
-    //text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
-    text-align: center;
+  //text-shadow: 2px 2px 0 rgba(0, 0, 0, .1); text-align: center;
     color: white;
     font-size: 15px;
     padding-top: 79px;
@@ -387,3 +401,5 @@ footer {
   }
 
 }
+
+
