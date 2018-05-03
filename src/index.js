@@ -56,7 +56,7 @@ $(document).ready(function () {
         highlightClass: "highlighted"
     });
 
-    let modal = new Modal({
+    let modal1 = new Modal({
         modal: ".modal",
         openButton: ".open-modal",
         closeButton: ".close-icon",
