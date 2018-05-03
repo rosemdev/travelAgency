@@ -115,7 +115,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       & .user-card {
-      margin: 25px;
+        margin: 25px;
         & .avatar {
           & img {
             top: -18%;
@@ -127,9 +127,31 @@
     }
   }
 
-}
+  .modal {
+    & .icon-headline {
+      & .close-icon {
+        right: 24px;
+        top: 124px;
 
-@keyframes smoothHeader {
-  from {opacity: 0.5;}
-  to {opacity: 1;}
-}
+
+      }
+    }
+
+    & span {
+      & .social-icons {
+        & a {
+          flex: inherit;
+        }
+      }
+    }
+
+  }
+
+  @keyframes smoothHeader {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
