@@ -402,6 +402,7 @@ footer {
 }
 
 .modal {
+  opacity: 0;
   position: fixed;
   left: 0;
   right: 0;
@@ -409,21 +410,25 @@ footer {
   bottom: 0;
   background-color: #ffffffe3;
   padding: 3.4rem 18px;
-  z-index: 5;
+  //z-index: -1;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  transform: scale(1.2);
+  transition: all .5s ease-in-out;
 
   & .icon-headline {
     margin-top: 20px;
 
     & .close-icon {
       display: flex;
+      align-items: flex-end;
       position: absolute;
       right: 0;
       top: 95px;
-      z-index: 6;
+      height: 30px;
+      //z-index: 6;
 
       & span {
         width: 25px;
@@ -479,6 +484,12 @@ footer {
       }
     }
   }
+}
+
+.modal.opened {
+  opacity: 1;
+  transform: scale(1);
+  //z-index: 1;
 }
 
 

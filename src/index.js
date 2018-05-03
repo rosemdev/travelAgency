@@ -7,6 +7,7 @@ import TypingGoal from "./assets/modules/TypingGoal"
 import stickyHeader from "./assets/modules/StickyHeader"
 import ScrollIntoView from "./assets/modules/ScrollIntoView"
 import HighlightMenuItemOnScroll from "./assets/modules/HighlightMenuItemOnScroll"
+import Modal from "./assets/modules/Modal"
 
 
 $(document).ready(function () {
@@ -53,5 +54,12 @@ $(document).ready(function () {
         sectionSelector: ".section",
         menuItemSelector: "nav ul li a",
         highlightClass: "highlighted"
-    })
+    });
+
+    let modal = new Modal({
+        modal: ".modal",
+        openButton: ".open-modal",
+        closeButton: ".close-icon",
+        opened: "opened"
+    });
 });
