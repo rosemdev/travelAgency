@@ -4,10 +4,13 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const extractCSS = new ExtractTextPlugin("main.css");
 
 let conf = {
-    entry: "./src/index.js",
+    entry: {
+        App: "./src/index.js",
+        Lazy: "./src/lazy.js"
+    },
     output: {
         path: path.resolve(__dirname, "./dist"),
-        filename: "main.js"
+        filename: "[name].js"
 
     },
     devServer: {
@@ -21,7 +24,7 @@ let conf = {
                     {
                         loader: "html-loader",
                         options: {
-                            attrs: ['img:src', 'source:srcset']
+                            attrs: ['img:src', 'source:srcset', 'source:data-srcset', 'img:data-src']
                         }
                     }
 

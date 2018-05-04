@@ -10,6 +10,7 @@ export default class Transition {
         this.isOpen = false;
         this.element.addEventListener("transitionend", () => {
             if (!this.isOpen) {
+                console.log(this.isOpen);
                 this.element.style.display = "none";
             }
         });
@@ -24,6 +25,31 @@ export default class Transition {
 
         setImmediate(() => {
             this.element.classList.toggle(this.className, this.isOpen);
+        });
+    }
+
+    //for popups & etc... > only adding a class after click to element, to close - need to click another element
+    addClass() {
+        this.isOpen = true;
+
+        if (this.isOpen) {
+            this.element.style.display = "";
+        }
+
+        setImmediate(() => {
+            // console.log(this.isOpen);
+            // console.log(this.element);
+            this.element.classList.add(this.className);
+        });
+    }
+
+    removeClass() {
+        this.isOpen = false;
+
+        setImmediate(() => {
+            // console.log(this.isOpen);
+            // console.log(this.element);
+            this.element.classList.remove(this.className);
         });
     }
 }

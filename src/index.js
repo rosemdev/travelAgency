@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import "./assets/styles/reset.pcss";
 import "./assets/styles/styles.pcss";
+import "./lazy"
 import MobileMenu from "./assets/modules/MobileMenu"
 import RevealOnScroll from "./assets/modules/RevealOnScroll"
 import TypingGoal from "./assets/modules/TypingGoal"
@@ -56,7 +57,7 @@ $(document).ready(function () {
         highlightClass: "highlighted"
     });
 
-    let modal1 = new Modal({
+    let modal = new Modal({
         modal: ".modal",
         openButton: ".open-modal",
         closeButton: ".close-icon",

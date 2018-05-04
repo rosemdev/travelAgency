@@ -1,7 +1,7 @@
 import Transition from "./Transition";
 
 export default class Modal {
-    constructor (options) {
+    constructor(options) {
 
         this.modal = document.querySelector(options.modal);
         this.openButtons = document.querySelectorAll(options.openButton);
@@ -13,27 +13,33 @@ export default class Modal {
 
 
     events() {
-    //open modal
-
+        //open modal
         for (let button of this.openButtons) {
             button.addEventListener("click", this.openModal.bind(this));
         }
 
-    // close modal
+        // close modal
         this.closeButton.addEventListener("click", this.closeModal.bind(this));
 
-    // escape button to close modal
+        // escape button to close modal
+        document.addEventListener("keyup", this.keyPressHandler.bind(this))
     }
 
-    openModal (event) {
+    openModal(event) {
         event.preventDefault();
-        this.transition.toggle();
+        this.transition.addClass();
     }
 
-    closeModal () {
+    closeModal() {
         event.preventDefault();
-        this.transition.toggle();
+        this.transition.removeClass();
 
+    }
+
+    keyPressHandler(event) {
+        if (event.keyCode === 27) {
+            this.transition.removeClass();
+        }
     }
 
 

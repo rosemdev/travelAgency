@@ -96,11 +96,13 @@ body {
     z-index: 4;
     background-color: #3055728a;
     text-align: left;
-    transition: all .3s ease-out;
+    visibility: hidden;
+    transition: all .5s ease-out;
 
     &.active {
       opacity: 1;
       transform: scale(1);
+      visibility: visible;
     }
 
     &::after {
@@ -417,6 +419,8 @@ footer {
   justify-content: center;
   transform: scale(1.2);
   transition: all .5s ease-in-out;
+  visibility: hidden;
+
 
   & .icon-headline {
     margin-top: 20px;
@@ -489,7 +493,7 @@ footer {
 .modal.opened {
   opacity: 1;
   transform: scale(1);
-  //z-index: 1;
+  visibility: visible;
 }
 
 
