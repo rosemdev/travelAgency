@@ -1,7 +1,5 @@
 import $ from 'jquery'
-import ScrollReveal from "../../../node_modules/scrollreveal/dist/scrollreveal.min"
-
-
+import ScrollReveal from "scrollreveal"
 
 export default class RevealOnScroll {
     constructor (elementSelector, options, sequence) {

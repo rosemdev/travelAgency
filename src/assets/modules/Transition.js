@@ -10,7 +10,6 @@ export default class Transition {
         this.isOpen = false;
         this.element.addEventListener("transitionend", () => {
             if (!this.isOpen) {
-                console.log(this.isOpen);
                 this.element.style.display = "none";
             }
         });
