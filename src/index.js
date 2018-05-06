@@ -35,14 +35,14 @@ $(document).ready(function () {
     let features = new RevealOnScroll(".feature", {
         scale: 1,
         opacity: 0.25,
-        reset: true,
+        reset: false,
         viewOffset: {top: 50},
         easing: 'cubic-bezier(0.68, 0.02, 0.82, 0.99)',
     }, 200);
     let testimonials = new RevealOnScroll(".user-card", {
         opacity: 0.25,
         scale: 0.8,
-        reset: true,
+        reset: false,
         delay: 2,
     }, 200);
 
