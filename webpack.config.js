@@ -9,12 +9,12 @@ let conf = {
         Lazy: "./src/lazy.js"
     },
     output: {
-        path: path.resolve(__dirname, "./docs"),
+        path: path.resolve(__dirname, "./dist"),
         filename: "[name].js"
 
     },
     devServer: {
-        contentBase: path.join(__dirname, "docs"),
+        contentBase: path.join(__dirname, "dist"),
     },
     module: {
         rules: [
