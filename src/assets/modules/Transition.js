@@ -37,8 +37,6 @@ export default class Transition {
         }
 
         setImmediate(() => {
-            // console.log(this.isOpen);
-            // console.log(this.element);
             this.element.classList.add(this.className);
         });
     }
@@ -47,8 +45,6 @@ export default class Transition {
         this.isOpen = false;
 
         setImmediate(() => {
-            // console.log(this.isOpen);
-            // console.log(this.element);
             this.element.classList.remove(this.className);
         });
     }
