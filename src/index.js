@@ -10,9 +10,6 @@ import ScrollIntoView from "./assets/modules/ScrollIntoView"
 import HighlightMenuItemOnScroll from "./assets/modules/HighlightMenuItemOnScroll"
 import Modal from "./assets/modules/Modal"
 
-import "./assets/images/icons/clear-view-escapes.svg"
-
-
 $(document).ready(function () {
     let mobileMenu = new MobileMenu(".burger-icon", "active");
 
